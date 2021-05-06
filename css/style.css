@@ -186,7 +186,7 @@ a {
 
 .icon-container {
   align-items: center;
-  background-color: #f3f9fa;
+  background: #f3f9fa;
   border-radius: 100%;
   display: inline-flex;
   height: 64px;
@@ -211,7 +211,7 @@ a {
   padding: 2rem 4vh;
   text-align: center;
   text-transform: uppercase;
-  transition: background-color 0.15s;
+  transition: background 0.15s ease;
   white-space: nowrap;
 }
 
@@ -228,25 +228,25 @@ a {
 }
 
 .btn--primary {
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   color: #fff;
 }
 
 .btn--primary:hover {
-  background-color: #5ca3ff;
+  background: #5ca3ff;
 }
 
 .btn--secondary {
-  background-color: var(--color-secondary);
+  background: var(--color-secondary);
   color: #fff;
 }
 
 .btn--secondary:hover {
-  background-color: #40e1ff;
+  background: #40e1ff;
 }
 
 .btn--accent {
-  background-color: var(--color-accent);
+  background: var(--color-accent);
   color: #fff;
 }
 
@@ -324,7 +324,7 @@ a {
 .card {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .card__header {
@@ -339,24 +339,28 @@ a {
 }
 
 .card--primary .card__header {
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   color: #fff;
 }
 
 .card--primary .badge--primary {
-  background-color: #126de4;
+  background: #126de4;
 }
 
 .card--secondary .card__header {
-  background-color: var(--color-secondary);
+  background: var(--color-secondary);
   color: #fff;
 }
 
 .card--secondary .badge--secondary {
-  background-color: #02cdf1;
+  background: #02cdf1;
 }
 
 /* Plans */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
 .plan__name {
   color: #fff;
   font-size: 2.4rem;
@@ -386,6 +390,10 @@ a {
   margin-bottom: 2rem;
 }
 
+.plan--popular {
+  transform: scale(1.1);
+}
+
 .plan--popular .card__header {
   position: relative;
 }
@@ -397,6 +405,14 @@ a {
   right: 5%;
   top: -6px;
   width: 40px;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -548,7 +564,7 @@ a {
 }
 
 .callout--primary {
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -632,7 +648,7 @@ a {
 }
 
 .block--dark {
-  background-color: #000;
+  background: #000;
   color: #7b858b;
 }
 
@@ -659,7 +675,7 @@ a {
 
 .nav {
   align-items: center;
-  background-color: #000;
+  background: #000;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -769,4 +785,14 @@ a {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
+}
+
+/* Plans Block */
+.block-plans .grid {
+  gap: 8rem 6rem;
+}
+
+.block-plans .card {
+  margin: 0 auto;
+  max-width: 500px;
 }
