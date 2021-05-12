@@ -661,12 +661,12 @@ a {
 
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 .container {
@@ -890,6 +890,7 @@ a {
 @media screen and (min-width: 768px) {
   .footer {
     font-size: 1.5rem;
+    padding-top: 10rem;
   }
 
   .footer__sections {
@@ -921,4 +922,8 @@ a {
   .footer__heading {
     font-size: 1.6rem;
   }
+}
+
+.callout-signup {
+  transform: translateY(5rem);
 }
